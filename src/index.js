@@ -1,11 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from 'components/GlobalStyle';
+import { Example1 } from 'components/Example1';
 import './index.css';
-import App from './App';
+import videos from './videos.json';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+// import App from './App';
+
+const theme = {};
+
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Example1 url={videos} />
+    </ThemeProvider>
+    {/* <App /> */}
+  </React.StrictMode>,
+  document.getElementById('root')
 );
