@@ -16,7 +16,7 @@ export class Player extends Component {
     const { isVideoLoaded } = this.state;
     const { url } = this.props;
     const showLoader = url && !isVideoLoaded;
-    const playerSize = isVideoLoaded ? '100%' : 0;
+    const playerSize = isVideoLoaded ? '55%' : 0;
 
     return (
       <>
